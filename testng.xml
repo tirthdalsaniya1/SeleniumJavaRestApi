@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="10" parallel="methods"
+	thread-count="3">
+	<parameter name="browser" value="chromelocal" />
+	<parameter name="environment" value="testenv1" />
+
+	<test name="Test">
+		<classes>
+			<class name="ebaytest.EbayTest">
+				<methods>
+					<include name="verifyThatCartIsUpdatedByTheFirstBookTest" />
+				</methods>
+			</class>
+			<class name="restapitest.ApiTest">
+				<methods>
+					<include name="verifyCurrentPriceGetRequest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

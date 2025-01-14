@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<configuration>
+	<environment>
+		<testenv1>
+			<URL>https://www.ebay.com/</URL>
+			<restURL>https://api.coindesk.com/v1/bpi/currentprice.json</restURL>
+		</testenv1>
+	</environment>
+</configuration>
