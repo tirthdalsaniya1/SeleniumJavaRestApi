@@ -41,8 +41,6 @@ public class BasePage {
 
 	protected String url;
 
-	protected URL hubURL;
-
 	private void deckout(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -108,8 +106,7 @@ public class BasePage {
 	 */
 	@Parameters({ "browser", "environment" })
 	@BeforeMethod(alwaysRun = true, description = "Setting up the Selenium enviroment.")
-	public void testSetup(@Optional("chromelocal") String browser, @Optional("testenv1") String environment)
-			throws Exception {
+	public void testSetup(@Optional("chromelocal") String browser, @Optional("testenv1") String environment) {
 		BasePage.environment = environment;
 		BasePage.browser = browser;
 		logger.info("Execution environment - {}", environment);
