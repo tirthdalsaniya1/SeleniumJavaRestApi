@@ -19,10 +19,12 @@ public class ApiTest extends BasePage {
 
 	@Test
 	public void verifyCurrentPriceGetRequest() {
-
-		String url = ConfigReader.getConfig("environment." + BasePage.environment + ".restURL");
-
-		Response getApiResponse = given().get(url).then().log().all().extract().response();
+		
+		//Fetch GET CALL URL from the config.xml file
+		String apiURL = ConfigReader.getConfig("environment." + BasePage.environment + ".restURL");
+		
+		//Hit Get api rest request
+		Response getApiResponse = given().get(apiURL).then().log().all().extract().response();
 
 		// Get the JSON response as a string
 		String jsonResponse = getApiResponse.asString();
